@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".model.Login">
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorAccent" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="74dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="120dp"
+            android:layout_marginEnd="6dp"
+            android:text="WELLCOME"
+            android:textAlignment="center"
+            android:textColor="#EEF4ECEC"
+            android:textSize="30dp">
+
+        </TextView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="421dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="0dp">
+
+            <EditText
+                android:id="@+id/username"
+                android:layout_width="232dp"
+                android:layout_height="55dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="69dp"
+                android:background="@drawable/boder"
+                android:hint="username"
+                android:textAlignment="center"
+                android:textColor="#EEF4ECEC"
+                android:textColorHint="#EEF4ECEC"></EditText>
+
+            <EditText
+                android:id="@+id/pass"
+                android:layout_width="232dp"
+                android:layout_height="57dp"
+
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="56dp"
+                android:layout_marginEnd="69dp"
+                android:background="@drawable/boder"
+                android:hint="password"
+                android:password="true"
+                android:textAlignment="center"
+                android:textColor="#EEF4ECEC"
+                android:textColorHint="#EEF4ECEC"></EditText>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="272dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="-1dp">
+
+                <Button
+                    android:id="@+id/register"
+                    android:layout_width="234dp"
+                    android:layout_height="65dp"
+                    android:layout_alignBottom="@+id/login"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="68dp"
+                    android:layout_marginBottom="-91dp"
+                    android:backgroundTint="@color/colorAccent"
+                    android:text="REGISTER"
+                    android:textColor="#EEF4ECEC"/>
+
+                <Button
+                    android:id="@+id/login"
+                    android:layout_width="232dp"
+                    android:layout_height="74dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="68dp"
+                    android:backgroundTint="@color/colorAccent"
+                    android:text="LOGIN"
+                    android:textColor="#EEF4ECEC"/>
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

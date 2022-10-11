@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Register"
+    android:background="@color/colorAccent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="310dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="79dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="79dp"
+            android:text="REGISTER"
+            android:textAlignment="center"
+            android:textColor="#EEF4ECEC"
+            android:textSize="50dp">
+
+        </TextView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="420dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp">
+        <EditText
+            android:layout_width="232dp"
+            android:layout_height="55dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="69dp"
+            android:background="@drawable/boder"
+            android:hint="username"
+            android:textAlignment="center"
+            android:textColor="#EEF4ECEC"
+            android:textColorHint="#EEF4ECEC"
+            ></EditText>
+
+        <EditText
+            android:layout_width="232dp"
+            android:layout_height="57dp"
+
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="76dp"
+            android:layout_marginEnd="69dp"
+            android:background="@drawable/boder"
+            android:hint="password"
+            android:password="true"
+            android:textAlignment="center"
+            android:textColor="#EEF4ECEC"
+            android:textColorHint="#EEF4ECEC"></EditText>
+
+        <EditText
+            android:layout_width="232dp"
+            android:layout_height="57dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="159dp"
+            android:layout_marginEnd="69dp"
+            android:layout_marginBottom="202dp"
+            android:background="@drawable/boder"
+            android:hint="confirm password"
+            android:password="true"
+            android:textAlignment="center"
+            android:textColor="#EEF4ECEC"
+            android:textColorHint="#EEF4ECEC"></EditText>
+
+        <Button
+            android:id="@+id/JOIN"
+            android:layout_width="231dp"
+            android:layout_height="75dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="70dp"
+            android:layout_marginBottom="92dp"
+            android:backgroundTint="@color/colorAccent"
+            android:textSize="40dp"
+            android:text="JOIN "
+            android:textColor="#EEF4ECEC"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
