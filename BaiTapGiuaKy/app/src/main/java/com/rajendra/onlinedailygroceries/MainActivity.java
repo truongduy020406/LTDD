@@ -1,28 +1,31 @@
 package com.rajendra.onlinedailygroceries;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.provider.ContactsContract;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
 import com.rajendra.onlinedailygroceries.adapter.CategoryAdapter;
 import com.rajendra.onlinedailygroceries.adapter.DiscountedProductAdapter;
 import com.rajendra.onlinedailygroceries.adapter.RecentlyViewedAdapter;
 import com.rajendra.onlinedailygroceries.model.Category;
 import com.rajendra.onlinedailygroceries.model.DiscountedProducts;
+import com.rajendra.onlinedailygroceries.model.Login;
 import com.rajendra.onlinedailygroceries.model.RecentlyViewed;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.ListIterator;
 
 import static com.rajendra.onlinedailygroceries.R.drawable.*;
 
@@ -41,12 +44,35 @@ public class MainActivity extends AppCompatActivity {
     TextView allCategory;
     ImageView imageProfile;
 
+    BottomNavigationView bottomNavigationView;
+
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        bottomNavigationView = findViewById(R.id.bottom_navigation);
+        bottomNavigationView.setSelectedItemId(R.id.home);
+
+        bottomNavigationView.setOnItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()){
+                    case R.id.profile:
+                        Intent intent = new Intent(MainActivity.this , profile.class);
+                        startActivity(intent);
+                        return true;
+
+                    case R.id.about:
+                        Intent i = new Intent(MainActivity.this ,Login.class);
+                        startActivity(i);
+                        return true;
+                }
+                return false;
+            }
+
+        });
         discountRecyclerView = findViewById(R.id.discountedRecycler);
         categoryRecyclerView = findViewById(R.id.categoryRecycler);
         allCategory = findViewById(R.id.allCategoryImage);
