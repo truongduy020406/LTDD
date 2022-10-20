@@ -9,7 +9,7 @@
 
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorAccent" >
+        android:background="@drawable/img_4" >
 
         <TextView
             android:layout_width="match_parent"
@@ -20,8 +20,8 @@
             android:layout_marginEnd="6dp"
             android:text="WELLCOME"
             android:textAlignment="center"
-            android:textColor="#EEF4ECEC"
-            android:textSize="30dp">
+            android:textColor="#EE1F5339"
+            android:textSize="50dp">
 
         </TextView>
 
@@ -40,16 +40,16 @@
                 android:layout_alignParentEnd="true"
                 android:layout_marginEnd="69dp"
                 android:background="@drawable/boder"
+                android:textSize="25dp"
                 android:hint="username"
                 android:textAlignment="center"
-                android:textColor="#EEF4ECEC"
-                android:textColorHint="#EEF4ECEC"></EditText>
+                android:textColorHint="#EE022302"></EditText>
 
             <EditText
                 android:id="@+id/pass"
                 android:layout_width="232dp"
                 android:layout_height="57dp"
-
+                android:textSize="25dp"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:layout_marginTop="56dp"
@@ -58,8 +58,7 @@
                 android:hint="password"
                 android:password="true"
                 android:textAlignment="center"
-                android:textColor="#EEF4ECEC"
-                android:textColorHint="#EEF4ECEC"></EditText>
+                android:textColorHint="#EE0C0C0C"></EditText>
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -69,25 +68,28 @@
 
                 <Button
                     android:id="@+id/register"
-                    android:layout_width="234dp"
-                    android:layout_height="65dp"
+                    android:layout_width="232dp"
+                    android:layout_height="74dp"
+                    android:textSize="30dp"
                     android:layout_alignBottom="@+id/login"
                     android:layout_alignParentEnd="true"
-                    android:layout_marginEnd="68dp"
+                    android:layout_marginEnd="67dp"
                     android:layout_marginBottom="-91dp"
-                    android:backgroundTint="@color/colorAccent"
+                    android:background="@drawable/boderbutton"
                     android:text="REGISTER"
-                    android:textColor="#EEF4ECEC"/>
+                    android:textColor="#EE034A03" />
 
                 <Button
                     android:id="@+id/login"
+                    android:backgroundTintMode="add"
                     android:layout_width="232dp"
+                    android:textSize="30dp"
                     android:layout_height="74dp"
                     android:layout_alignParentEnd="true"
                     android:layout_marginEnd="68dp"
-                    android:backgroundTint="@color/colorAccent"
+                    android:background="@drawable/boderbutton"
                     android:text="LOGIN"
-                    android:textColor="#EEF4ECEC"/>
+                    android:textColor="#EE034A03"/>
             </RelativeLayout>
         </RelativeLayout>
 

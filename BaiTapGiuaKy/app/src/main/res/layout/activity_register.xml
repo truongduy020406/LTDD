@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Register"
-    android:background="@color/colorAccent">
+    android:background="@drawable/img_4">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -18,7 +18,7 @@
             android:layout_marginBottom="79dp"
             android:text="REGISTER"
             android:textAlignment="center"
-            android:textColor="#EEF4ECEC"
+            android:textColor="#EE1F5339"
             android:textSize="50dp">
 
         </TextView>
@@ -37,8 +37,8 @@
             android:background="@drawable/boder"
             android:hint="username"
             android:textAlignment="center"
-            android:textColor="#EEF4ECEC"
-            android:textColorHint="#EEF4ECEC"
+            android:textSize="25dp"
+            android:textColorHint="#EE022302"
             ></EditText>
 
         <EditText
@@ -49,12 +49,12 @@
             android:layout_alignParentEnd="true"
             android:layout_marginTop="76dp"
             android:layout_marginEnd="69dp"
+            android:textSize="25dp"
             android:background="@drawable/boder"
             android:hint="password"
             android:password="true"
             android:textAlignment="center"
-            android:textColor="#EEF4ECEC"
-            android:textColorHint="#EEF4ECEC"></EditText>
+            android:textColorHint="#EE022302"></EditText>
 
         <EditText
             android:layout_width="232dp"
@@ -67,22 +67,22 @@
             android:background="@drawable/boder"
             android:hint="confirm password"
             android:password="true"
+            android:textSize="25dp"
             android:textAlignment="center"
-            android:textColor="#EEF4ECEC"
-            android:textColorHint="#EEF4ECEC"></EditText>
+            android:textColorHint="#EE022302"></EditText>
 
         <Button
             android:id="@+id/JOIN"
-            android:layout_width="231dp"
+            android:layout_width="235dp"
             android:layout_height="75dp"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
             android:layout_marginEnd="70dp"
             android:layout_marginBottom="92dp"
-            android:backgroundTint="@color/colorAccent"
+            android:background="@drawable/boderbutton"
             android:textSize="40dp"
             android:text="JOIN "
-            android:textColor="#EEF4ECEC"/>
+            android:textColor="#EE034A03"/>
 
     </RelativeLayout>
 
