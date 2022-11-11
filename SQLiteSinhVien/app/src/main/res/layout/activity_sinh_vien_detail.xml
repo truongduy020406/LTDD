@@ -12,7 +12,7 @@
         android:layout_width="170dp"
         android:layout_height="200dp"
         android:layout_marginTop="16dp"
-        android:background="@drawable/anh_the"
+        android:background="@drawable/ic_baseline_people_outline_24"
         android:scaleType="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

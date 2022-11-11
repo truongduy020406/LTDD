@@ -3,42 +3,42 @@ package com.example.sqlitesinhvien;
 import java.io.Serializable;
 
 public class SinhVien implements Serializable {
-    private String maSV110;
-    private String tenSV110;
-    private String mota110;
+    private String maSV;
+    private String tenSV;
+    private String mota;
     private int diem;
     private String maLop;
 
-    public SinhVien(String maSV110, String tenSV110, String mota110, int diem, String maLop) {
-        this.maSV110 = maSV110;
-        this.tenSV110 = tenSV110;
-        this.mota110 = mota110;
+    public SinhVien(String maSV, String tenSV, String mota, int diem, String maLop) {
+        this.maSV = maSV;
+        this.tenSV = tenSV;
+        this.mota = mota;
         this.diem = diem;
         this.maLop = maLop;
     }
 
-    public String getMaSV110() {
-        return maSV110;
+    public String getMaSV() {
+        return maSV;
     }
 
-    public void setMaSV110(String maSV110) {
-        this.maSV110 = maSV110;
+    public void setMaSV(String maSV) {
+        this.maSV = maSV;
     }
 
-    public String getTenSV110() {
-        return tenSV110;
+    public String getTenSV() {
+        return tenSV;
     }
 
-    public void setTenSV110(String tenSV110) {
-        this.tenSV110 = tenSV110;
+    public void setTenSV(String tenSV) {
+        this.tenSV = tenSV;
     }
 
-    public String getMota110() {
-        return mota110;
+    public String getMota() {
+        return mota;
     }
 
-    public void setMota110(String mota110) {
-        this.mota110 = mota110;
+    public void setMota(String mota) {
+        this.mota = mota;
     }
 
     public int getDiem() {

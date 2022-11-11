@@ -51,9 +51,9 @@ public class MyDatabase extends SQLiteOpenHelper {
     public void insertSV(SinhVien sinhVien){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
-        values.put(KEY_MA_SV, sinhVien.getMaSV110());
-        values.put(KEY_TEN_SV, sinhVien.getTenSV110());
-        values.put(KEY_MO_TA, sinhVien.getMota110());
+        values.put(KEY_MA_SV, sinhVien.getMaSV());
+        values.put(KEY_TEN_SV, sinhVien.getTenSV());
+        values.put(KEY_MO_TA, sinhVien.getMota());
         values.put(KEY_MA_LOP, sinhVien.getMaLop());
 
         values.put(KEY_DIEM, sinhVien.getDiem());
@@ -69,10 +69,10 @@ public class MyDatabase extends SQLiteOpenHelper {
     public void updateSV(SinhVien sinhVien){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
-        values.put(KEY_TEN_SV, sinhVien.getTenSV110());
-        values.put(KEY_MO_TA, sinhVien.getMota110());
+        values.put(KEY_TEN_SV, sinhVien.getTenSV());
+        values.put(KEY_MO_TA, sinhVien.getMota());
         values.put(KEY_MA_LOP, sinhVien.getMaLop());
-        db.update(TABLE_NAME_SV, values, KEY_MA_SV + "=?", new String[]{sinhVien.getMaSV110()});
+        db.update(TABLE_NAME_SV, values, KEY_MA_SV + "=?", new String[]{sinhVien.getMaSV()});
         db.close();
     }
 

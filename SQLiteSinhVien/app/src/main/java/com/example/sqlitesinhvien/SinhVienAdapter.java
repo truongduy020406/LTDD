@@ -37,9 +37,9 @@ public class SinhVienAdapter extends  RecyclerView.Adapter<SinhVienAdapter.ViewH
             return;
         }
 
-        holder.tv_MaSV.setText(sinhVien.getMaSV110());
-        holder.tv_TenSV.setText(sinhVien.getTenSV110());
-        holder.tv_MoTa.setText(sinhVien.getMota110());
+        holder.tv_MaSV.setText(sinhVien.getMaSV());
+        holder.tv_TenSV.setText(sinhVien.getTenSV());
+        holder.tv_MoTa.setText(sinhVien.getMota());
 //        holder.tv_DiemSV.setText(sinhVien.getDiem());
         holder.tv_MaLopSV.setText(sinhVien.getMaLop());
 

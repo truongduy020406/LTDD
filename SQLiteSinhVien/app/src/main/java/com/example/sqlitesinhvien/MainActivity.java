@@ -17,9 +17,9 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    private RecyclerView rcv_SV110;
-    private Button btn_themSV110, btn_xoaSV110, btn_suaSV110;
-    private EditText edt_maSv110, edt_tenSV110, edt_moTa110, edt_maLop110, edt_maDiem;
+    private RecyclerView rcv_SV;
+    private Button btn_themSV, btn_xoaSV, btn_suaSV;
+    private EditText edt_maSv, edt_tenSV, edt_moTa, edt_maLop, edt_maDiem;
     MyDatabase myDatabase = new MyDatabase(this);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,19 +33,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void intViewListener() {
-        btn_themSV110 = findViewById(R.id.btn_themSV110);
-        btn_xoaSV110 = findViewById(R.id.btn_xoaSV110);
-        btn_suaSV110 = findViewById(R.id.btn_suaSV110);
-        edt_maSv110 = findViewById(R.id.edt_maSV110);
-        edt_tenSV110 = findViewById(R.id.edt_tenSV110);
-        edt_moTa110 = findViewById(R.id.edt_mota110);
-        edt_maLop110 = findViewById(R.id.edt_maLop110);
+        btn_themSV = findViewById(R.id.btn_themSV);
+        btn_xoaSV = findViewById(R.id.btn_xoaSV);
+        btn_suaSV = findViewById(R.id.btn_suaSV);
+        edt_maSv = findViewById(R.id.edt_maSV);
+        edt_tenSV = findViewById(R.id.edt_tenSV);
+        edt_moTa = findViewById(R.id.edt_mota);
+        edt_maLop = findViewById(R.id.edt_maLop);
         edt_maDiem = findViewById(R.id.edt_maDiem);
 
-        btn_themSV110.setOnClickListener(new View.OnClickListener() {
+        btn_themSV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                SinhVien sinhVien = new SinhVien(edt_maSv110.getText().toString(), edt_tenSV110.getText().toString(), edt_moTa110.getText().toString(), Integer.parseInt(edt_maDiem.getText().toString()), edt_maLop110.getText().toString());
+                SinhVien sinhVien = new SinhVien(edt_maSv.getText().toString(), edt_tenSV.getText().toString(), edt_moTa.getText().toString(), Integer.parseInt(edt_maDiem.getText().toString()), edt_maLop.getText().toString());
                 myDatabase.insertSV(sinhVien);
                 Toast.makeText(getApplicationContext(), "Thêm thành công lớp mới!", Toast.LENGTH_LONG).show();
                 initView();
@@ -53,10 +53,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btn_suaSV110.setOnClickListener(new View.OnClickListener() {
+        btn_suaSV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                SinhVien sinhVien = new SinhVien(edt_maSv110.getText().toString(), edt_tenSV110.getText().toString(), edt_moTa110.getText().toString(), Integer.parseInt(edt_maDiem.getText().toString()), edt_maLop110.getText().toString());
+                SinhVien sinhVien = new SinhVien(edt_maSv.getText().toString(), edt_tenSV.getText().toString(), edt_moTa.getText().toString(), Integer.parseInt(edt_maDiem.getText().toString()), edt_maLop.getText().toString());
 
                 myDatabase.updateSV(sinhVien);
                 Toast.makeText(MainActivity.this, "Xóa thành công!", Toast.LENGTH_SHORT).show();
@@ -64,10 +64,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btn_xoaSV110.setOnClickListener(new View.OnClickListener() {
+        btn_xoaSV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                myDatabase.deleteSV(edt_maSv110.getText().toString());
+                myDatabase.deleteSV(edt_maSv.getText().toString());
                 Toast.makeText(MainActivity.this, "Xóa lớp thành công!", Toast.LENGTH_SHORT).show();
                 initView();
             }
@@ -76,14 +76,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initView() {
-        rcv_SV110 = findViewById(R.id.rcv_SV110);
-        rcv_SV110.setHasFixedSize(true);
+        rcv_SV = findViewById(R.id.rcv_SV);
+        rcv_SV.setHasFixedSize(true);
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
-        rcv_SV110.setLayoutManager(linearLayoutManager);
+        rcv_SV.setLayoutManager(linearLayoutManager);
         // them duong divider giua cac item
         RecyclerView.ItemDecoration itemDecoration = new DividerItemDecoration(this, DividerItemDecoration.VERTICAL);
-        rcv_SV110.addItemDecoration(itemDecoration);
+        rcv_SV.addItemDecoration(itemDecoration);
 
         Intent intent = getIntent();
         Lop lop = (Lop) intent.getSerializableExtra("object_Lop");
@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
                 onClickGoToSVDetail(sinhVien);
             }
         });
-        rcv_SV110.setAdapter(adapter);
+        rcv_SV.setAdapter(adapter);
     }
 
     private void onClickGoToSVDetail(SinhVien sinhvien){

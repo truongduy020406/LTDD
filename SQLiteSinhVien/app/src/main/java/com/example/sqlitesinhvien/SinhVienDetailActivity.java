@@ -26,9 +26,9 @@ public class SinhVienDetailActivity extends AppCompatActivity {
         Intent intent = getIntent();
         SinhVien sinhVien = (SinhVien) intent.getSerializableExtra("object_SV");
 
-        tv_MaSV_dt.setText(sinhVien.getMaSV110());
-        tv_tenSV_dt.setText(sinhVien.getTenSV110());
-        tv_Mota_dt.setText(sinhVien.getMota110());
+        tv_MaSV_dt.setText(sinhVien.getMaSV());
+        tv_tenSV_dt.setText(sinhVien.getTenSV());
+        tv_Mota_dt.setText(sinhVien.getMota());
         tv_maLop_dt.setText(sinhVien.getMaLop());
 
 

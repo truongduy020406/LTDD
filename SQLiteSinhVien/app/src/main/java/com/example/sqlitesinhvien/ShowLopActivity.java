@@ -29,10 +29,10 @@ public class ShowLopActivity extends AppCompatActivity {
     }
 
     private void intViewListener() {
-        btn_themlop110 = findViewById(R.id.btn_themLop110);
-        edt_maLop110 = findViewById(R.id.edt_maLop110);
-        edt_tenLop110 = findViewById(R.id.edt_tenLop110);
-        edt_siSoLop110 = findViewById(R.id.edt_siSoLop110);
+        btn_themlop110 = findViewById(R.id.btn_themLop);
+        edt_maLop110 = findViewById(R.id.edt_maLop);
+        edt_tenLop110 = findViewById(R.id.edt_tenLop);
+        edt_siSoLop110 = findViewById(R.id.edt_siSoLop);
 
 
         btn_themlop110.setOnClickListener(new View.OnClickListener() {
@@ -46,7 +46,7 @@ public class ShowLopActivity extends AppCompatActivity {
     }
 
     private void initView() {
-        rcv_lop110 = findViewById(R.id.rcv_lop110);
+        rcv_lop110 = findViewById(R.id.rcv_lop);
         rcv_lop110.setHasFixedSize(true);
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
